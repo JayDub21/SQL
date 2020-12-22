@@ -21,7 +21,7 @@ BEGIN
     
     SET risk_factor = invoices_total / invoices_count * 5;
     
-	RETURN risk_factor;
+	RETURN IFNULL(risk_factor, 0);
 END$$
 
 DELIMITER ;
