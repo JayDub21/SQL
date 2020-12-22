@@ -6,7 +6,7 @@
 
 -- USE sql_invoicing;
 
-CREATE VIEW clients_balance AS
+CREATE OR REPLACE VIEW clients_balance AS
 SELECT
 	c.client_id,
     c.name,
@@ -18,7 +18,7 @@ GROUP BY client_id, name
 
 
 -- View showing client_id, name, and total of all invoices
--- CREATE VIEW sales_by_client AS
+-- CREATE OR REPLACE VIEW sales_by_client AS
 -- SELECT 
 -- 	c.client_id,
 --     c.name,
